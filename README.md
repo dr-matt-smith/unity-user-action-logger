@@ -23,7 +23,7 @@ step 2: Scene with button to create new file with given User ID
 - create a UI Input text - for entering User ID
 - add to the Text GameObject of the Input Text an instance of script ScreenToFile
 - create a button labelled Create New Log File with User ID
-- add to button an OnCLick handler, linked to the Text GameObject of the Input Text - that calls the method: BUTTON_ACTION_CreateTextFileWithUserId()
+- add to button an OnCLick handler, linked to the Text GameObject of the Input Text - that calls the method: `BUTTON_ACTION_CreateTextFileWithUserId()`
 to use this scene:
 - run scene
 - type in a user ID (e.g. 22)
@@ -34,11 +34,16 @@ you should see new file crated in Logs folder
 --------
 step 3: Buttons / scripts to log text messages / actions to the Log file
 anywhere in hour game you can use this line to append a new message to the log file:
+
+```c#
 	string message = "user picked up a brick!";
 	AddToLogFile.LogLine( message );
-  
+```
+
 --------
 that's it!
+
 the log file are TEXT, with file extension ".csv" - so they should load into Excel easily for analysis / charting etc.
 you could take things further and log all data into a database for analysis after experiment is complete
-- I can help with that if needed ...
+
+have fun .. matt ..
